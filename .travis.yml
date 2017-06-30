@@ -7,12 +7,10 @@ language: node_js
 node_js:
   - '7'
 
-before_install:
-  - nvm use --delete-prefix v6.9.1 --silent
-
 install:
   - rm -rf node_modules
   - npm i -g npm@3
+  - npm config delete prefix
   - npm install
 
 branches:
